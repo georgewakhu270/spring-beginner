@@ -16,20 +16,4 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-    @GetMapping("/")
-    public String index() {
-        return "Hello world";
-    }
-
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-                           Model model) {
-        model.addAttribute("name", name);
-        return "greeting";
-    }
-
-    @GetMapping("/hello")
-    public String hello() {
-        return "hello world";
-    }
 }
